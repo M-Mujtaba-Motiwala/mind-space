@@ -1,0 +1,68 @@
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+build/
+dist/
+*.egg-info/
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Streamlit ─────────────────────────────────────────────
+.streamlit/cache/
+.streamlit/secrets.toml
+
+# ── Runtime database (user/chat data — do NOT commit) ─────
+*.db
+*.sqlite
+*.sqlite3
+mindspace.db
+
+# ── IDE / editor ──────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS (Windows / macOS / Linux) ──────────────────────────
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Secrets / environment ────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── ML / NLP caches (regenerable after clone) ─────────────
+.cache/
+nltk_data/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.log
+
+# HuggingFace / sentence-transformers (if cached in-repo)
+models--*/
+hub/
+
+# NOTE: the trained model (model/*.pkl), FAISS index (data/*.index,
+# data/*.pkl), cleaned datasets (data/*.csv), WHO source PDFs
+# (data/who_corpus/*.pdf), and docs PDF are committed
+# on purpose so the app runs immediately after cloning:
+#   streamlit run app.py
+# Rebuild artifacts with:
+#   python data/prepare_data.py
+#   python model/train.py
+#   python data/build_who_corpus.py
