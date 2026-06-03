@@ -3,7 +3,6 @@ pandas
 datasets
 sentence-transformers
 SpeechRecognition
-pyaudio
 numpy
 scikit-learn
 faiss-cpu
